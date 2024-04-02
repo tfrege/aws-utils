@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Action": [
+                "glue:GetTables",
+                "glue:GetTable",
+                "glue:DeleteTable"
+            ],
+            "Resource": [
+                "arn:aws:glue:[AWS_REGION_ID]:[AWS_ACCOUNT_ID]:table/*"
+            ]
+        }
+    ]
+}
