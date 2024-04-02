@@ -1,5 +1,6 @@
 # Script to delete AWS Glue tables in bulk
 * Written in Python 3.10
+* Gets a list of patterns to look for in the table names, and deletes the tables that match them
 
 
 ## Inputs
@@ -8,7 +9,7 @@
 |------|------------|
 | GLUE_DATA_CATALOG | Name of the Glue Catalog. Default: 'AwsDataCatalog' |
 | GLUE_DB_NAME | Name of the Glue Database |
-| TABLE_NAME_PATTERN | List of strings with the patterns to look for in the table names |
+| TABLE_NAME_PATTERNS | List of strings with the patterns to look for in the table names |
 
 ## Limitations
 
