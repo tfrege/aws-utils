@@ -1,10 +1,12 @@
 '''
-This script takes a list of patterns to look for in the table names and deletes them.
-The max number of tables to be retrieved for each pattern is 100 (AWS API's get_tables() hard limit). To work around this, you can add the same pattern multiple times on the TABLE_NAME_PATTERNS list.
-Requisites:
-1. If running this from AWS Lambda: verify the function has a good timeout (not the default 3 secs)
-2. The Lambda role should have the following permissions: 
-3. Have logging enabled (i.e. a CloudWatch log if running this as a Lambda function)
+    Telma Frege (tfrege@gmail.com)
+    
+    This script takes a list of patterns to look for in the table names and deletes them.
+    The max number of tables to be retrieved for each pattern is 100 (AWS API's get_tables() hard limit). To work around this, you can add the same pattern multiple times on the TABLE_NAME_PATTERNS list.
+    Requisites:
+    1. If running this from AWS Lambda: verify the function has a good timeout (not the default 3 secs)
+    2. The Lambda role should have the following permissions: 
+    3. Have logging enabled (i.e. a CloudWatch log if running this as a Lambda function)
 '''
 
 import json
