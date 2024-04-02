@@ -14,15 +14,15 @@
 ## Requirements
 * Python 3.10+
 * A role with appropiate permissions (see the file iam_policy.json)
-* Logging enabled (CloudWatch log or alternative... you're deleting tables! Make sure to leave a trace if you need to do an autopsy later :))
+* :exclamation: Logging enabled (CloudWatch log or alternative... you're deleting tables! Make sure to leave a trace if you need to do an autopsy later :))
 
 ## Limitations
 
-This script uses AWS API's [Glue GetTables](https://docs.aws.amazon.com/glue/latest/webapi/API_GetTables.html) which has a hard limit of 100 results. To overcome this, the same pattern can be added multiple times to the list of patterns.
+This script uses AWS API's [Glue GetTables](https://docs.aws.amazon.com/glue/latest/webapi/API_GetTables.html) which has a hard limit of 100 results. To overcome this, the same pattern can be added multiple times to TABLE_NAME_PATTERNS.
 
 ## Pseudocode
 
-1. Traverse the list TABLE_NAME_PATTERN
-2. For each pattern: get a list of tables that match the pattern
+1. Traverse the list TABLE_NAME_PATTERNS
+2. For each pattern: get a list of tables that match it
 3. Traverse the list of tables returned
 4. For each table: invoke glue.delete_table()
