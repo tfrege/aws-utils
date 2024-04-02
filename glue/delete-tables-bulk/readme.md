@@ -13,6 +13,7 @@
 
 ## Requirements
 * Python 3.10+
+* If running this in AWS Lambda: a timeout of at least 5 min
 * A role with appropiate permissions (see the file iam_policy.json)
 * :exclamation: Logging enabled (CloudWatch log or alternative... you're deleting tables! Make sure to leave a trace if you need to do an autopsy later :))
 
