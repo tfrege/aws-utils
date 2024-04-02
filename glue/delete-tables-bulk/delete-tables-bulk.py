@@ -13,17 +13,17 @@ import json
 import boto3
 import botocore
 
-glue_client  = boto3.client('glue')
+glue_client         = boto3.client('glue')
 
-GLUE_DATA_CATALOG = 'AwsDataCatalog'
-GLUE_DB_NAME = 'mygluedb'
+GLUE_DATA_CATALOG   = 'AwsDataCatalog'
+GLUE_DB_NAME        = 'mygluedb'
 TABLE_NAME_PATTERNS = ['pattern1_', '_pattern2_']
 
 def verify_tables(db_name):
     response = []
     try:
         for pattern in TABLE_NAME_PATTERNS:
-            print("SEARCHING TABLES WITH PREFIX: " + pattern)
+            print("SEARCHING TABLES WITH THE PATTERN: " + pattern)
             response = glue_client.get_tables(DatabaseName=db_name, MaxResults=100, Expression='*['+pattern+']*')
             print("FOUND A TOTAL OF " + str(len(response["TableList"])))
     except botocore.exceptions.ClientError as err:
