@@ -1,0 +1,4 @@
+SELECT columncount as number_headers, count(*) as total_files
+FROM "AwsDataCatalog"."default"."temp_prodheaders"
+group by columncount
+

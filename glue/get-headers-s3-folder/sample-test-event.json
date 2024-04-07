@@ -1,0 +1,26 @@
+/*
+    Attention: Replace the following with values: <REGION_ID>, <ACCOUNT_ID>, <BUCKET_NAME>, <KEY>
+    The file needs to be csv.gz
+*/
+
+{
+    "Records": [
+      {
+        "messageId": "c3a4ffce-5c2a-4c3a-92bd-f2e64f20b8ed",
+        "receiptHandle": "AQEB5G7enBWkgH99LKcvMI2n5eJZXTDOC57KVraVz/97cHwY4N/fSOhBM8qp9rpDLcjrVTyjOipHVik1/BYkGR2hDRJHjDesO6pow+Oe8MiDj7VJ3CQh8xhZE9duT6C77eJOv7LIn28tZKpicUNdrf+ZLJX/KISEkUO3d0vh3b9rLrMV8A2CUmMDzAhhEM3hiV3yxLr/sPBO6RC8q18lYO9RuS0zunC/PE5/AyZVIKagY53rMT7VX+EhK6w4+b8cIihbdddiROez99P9hB5cwG1oM2T53KmQynxI38YBvgLSE6+iCOM1CkCIFWEbh9ShIgQ/VzxnwUIKuNyMNB+sBHxadHiI9LcvCYM9yE2a6hIk0VL+P89ci9hvegfu+HtCzSyVQF3K3MZOEco2VTVLUFO2ug==",
+        "body": "{\"Records\": [{\"s3\": {\"bucket\": {\"name\": \"<BUCKET_NAME>\", \"arn\": \"arn:aws:s3:::<BUCKET_NAME>\"}, \"object\": {\"key\": \"<KEY>\"}}, \"additional_info\": \"\"}]}",
+        "attributes": {
+          "ApproximateReceiveCount": "2",
+          "AWSTraceHeader": "Root=1-66109c6d-543353693e14ebd6389a83b0;Parent=001476e312f49f1e;Sampled=0;Lineage=a2e6f786:0",
+          "SentTimestamp": "1712364653366",
+          "SenderId": "AROAXIVXMZ4MT4PGQJIBK:calea-process-raw-file",
+          "ApproximateFirstReceiveTimestamp": "1712364788401"
+        },
+        "messageAttributes": {},
+        "md5OfBody": "b537b7cfc55c070d95c91d9e3f268289",
+        "eventSource": "aws:sqs",
+        "eventSourceARN": "arn:aws:sqs:<REGION_ID>:<ACCOUNT_ID>:process-sbd-headers",
+        "awsRegion": "<REGION_ID>"
+      }
+    ]
+  }
