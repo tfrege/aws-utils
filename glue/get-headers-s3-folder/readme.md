@@ -15,4 +15,4 @@
 * If running this in AWS Lambda: a timeout of at least 5 min
 
 ## Architecture
-<img src='architecture.png'>
+<img src='get-gzip-headers-architecture.png'>
