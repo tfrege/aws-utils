@@ -10,7 +10,9 @@
                 "glue:DeleteTable"
             ],
             "Resource": [
-                "arn:aws:glue:[AWS_REGION_ID]:[AWS_ACCOUNT_ID]:table/*"
+                "arn:aws:glue:[AWS_REGION_ID]:[AWS_ACCOUNT_ID]:table/*",
+                "arn:aws:glue:[AWS_REGION_ID]:[AWS_ACCOUNT_ID]:catalog",
+                "arn:aws:glue:[AWS_REGION_ID]:[AWS_ACCOUNT_ID]:database/*"
             ]
         }
     ]
