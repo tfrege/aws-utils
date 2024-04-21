@@ -45,7 +45,7 @@ def delete_tables(db_name):
             response = glue_client.get_tables(DatabaseName=db_name, MaxResults=100, Expression='*['+pattern+']*')
             print("FOUND A TOTAL OF " + str(len(response["TableList"])))
             count = 0
-            for table in tables:
+            for table in response["TableList"]:
                 delete_table(table['Name'])
     except botocore.exceptions.ClientError as err:
         print(
